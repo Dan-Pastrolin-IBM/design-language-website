@@ -1,0 +1,169 @@
+---
+title: Type scale
+description:
+  Learn more about the proper application of type to reflect the IBM brand requires an understanding of scale.
+---
+
+import { AnchorLinks, PageDescription, Video } from 'gatsby-theme-carbon';
+
+import TypesetStyle from '../../components/TypesetStyle';
+import TypeScaleTable from '../../components/TypeScaleTable';
+
+<PageDescription>
+
+Our corporate typeface, IBM Plex®, has its own set of guidance and best practices. Establishing a well-defined type scale is fundamental. It’s the foundation for maintaining consistency and visual coherence across all brand materials.
+
+</PageDescription>
+
+<AnchorLinks>
+  <AnchorLink>Type scale equation</AnchorLink>
+  <AnchorLink>Large formats</AnchorLink>
+  <AnchorLink>Resources</AnchorLink>
+</AnchorLinks>
+
+
+## Type scale equation
+
+The IBM type scale is built on a single equation. This equation establishes line heights so that the type is harmoniously spaced at all sizes. Because we’re a worldwide enterprise, all alphabets we use for content globalization are taken into account when considering type scales.
+
+### Type scale formula
+
+The formula for the our type scale equation was created to provide hierarchy for all types of experiences. The formula assumes that y₀=12px. There have been occasional applications where a smaller scale was needed and created.
+
+<div>
+
+<TypeScaleTable />
+
+```
+Xn = Xn-1 + {INT[(n-2)/4] + 1} * 2
+Xn: step n type size Xn-1: step n-1 type size
+```
+
+</div>
+
+### Adjusted scale
+
+While the default language for communication is US English, the IBM Plex font also has been created in multiple languages. Some alphabets have taller ascenders and longer descenders than others, necessitating an adjusted scale. Based on the particularities of each alphabet, we established two main categories.
+
+#### Default scale
+
+For Latin, Cyrillic, Hebrew and Greek experiences, use the IBM type scales.
+
+#### Adjusted scale
+
+For Chinese, Japanese, Korean, Thai, Devanagari and Arabic experiences, decrease the type’s point size to 90% while keeping the same line height as in the default scale. 
+
+![](./images/Sample-img.png)
+
+<DoDontRow>
+<DoDont
+  colLg={6} colMd={6}
+  type="dont"
+  color="dark"
+  caption="Don’t use the default point size and line height for the Chinese, Japanese, Korean, Thai, Devanagari or Arabic alphabets. It can lead to letter overlaps or tight spacing."
+>
+
+![](./images/Sample-img.png)
+
+</DoDont>
+
+<DoDont
+  colLg={6} colMd={6}
+  type="do"
+  color="dark"
+  caption="Decrease the point size to 90% when using the Chinese, Japanese, Korean, Thai, Devanagari or Arabic alphabet."  
+>
+
+![](./images/Sample-img.png)
+
+</DoDont>
+</DoDontRow>
+
+
+## Type scale
+
+The universal type scale is the scale of type sizes and corresponding line heights that’s used throughout our design systems. The IBM type scale line height adapts to the paragraph length and relative type size. The line height is usually larger for body type scales and becomes progressively tighter as the type size increases relative to the artboard. For certain type sizes, multiple line height options are provided to account for varying paragraph lengths and specific constraints.
+
+Our existing templates use subsets of this scale. Make sure you use existing guidance and templates because they all draw from this universal scale.
+
+#### New compnent
+
+
+### Type tester
+
+We’ve included a type tester so you can play with Plex® and explore the type scale in all styles, weights and languages. The typeface really comes to life once it’s set in words or paragraphs, so feel free to type away. You can select the weight and scale in the dropdowns. For Plex Chinese, Japanese, Korean, Thai, Devanagari and Arabic, the type scale has been adjusted to 90% of the default size while keeping the same line height.
+
+#### New compnent
+
+
+## Large formats
+
+The size of an artboard and the viewing distance influence how we perceive type. The larger and further away an asset is, the smaller the type appears. To counter this effect, we use a multiplication factor in our type scales for large formats that are to be viewed from a distance. Using this principle, the mini unit is also multiplied depending on the same factors—see the [Grid page](https://www.ibm.com/design/language/2x-grid#base-unit) for more information. Note that these rules are valid as long as you are creating an asset at 100%. Extra scaling applies if you are designing at a different scale than 1:1. 
+
+### Print
+
+For print, the type scales were created for handheld print. When creating posters, signage and roll-up banners, depending on the viewing distance and size of the artboard, a multiplication factor should be used for both the point size and the line height. For example, for large posters and small signage such as easel signs, use 4x. For human-scale print experiences, such as roll-up banners and larger signage, use 8x. For print experiences viewed from across the street, use 32x.
+
+### Digital
+
+Digital assets are created at a certain pixel size and often enlarged to be projected on larger screens. When creating assets on artboards up to 4K, use our type scales as given. However, when creating layouts directly at larger resolutions or on larger artboards, use a multiplication factor. For example, when creating designs at 8K, use 4x the type scales; when creating at 16K, use 8x, and so on.
+
+![](./images/Sample-img.png)
+
+### Type scalefor large formats
+
+There’s no need for you to do the math—we’ve provided the type scale for large formats shown here. Keep in mind the suggestion to decrease the size to 90% for Chinese, Japanese, Korean, Thai, Devanagari and Arabic to account for the specifics of those alphabets. Review [Adjusted scale](#adjusted-scale) for more information.
+
+#### New component
+
+
+## Resources
+
+IBM has established a universal type scale, containing a wide range of sizes. When designing, it’s important to use a curated type set for each specific use case. Embedded within many of our templates are various curated type sets, all part of IBM’s universal type scale. For example, you’ll want to use the Carbon type sets for product and web experiences, and use the collateral type sets for handheld print and corresponding PDFs, and so on.
+
+<Row className="resource-card-group">
+<Column colMd={4} colLg={4} noGutterSm>
+  <ResourceCard
+    subTitle="IBM Plex® typeface latest release"
+    aspectRatio="2:1"
+    href="https://github.com/IBM/plex/releases/latest"
+    >
+
+![](../../images/resource-cards/github.png)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+  <ResourceCard
+    subTitle="Carbon type set"
+    aspectRatio="2:1"
+    href="https://carbondesignsystem.com/elements/typography/type-sets"
+    >
+
+![](../../images/resource-cards/carbon.png)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+  <ResourceCard
+    subTitle="Carbon v11 type set (Figma library)"
+    aspectRatio="2:1"
+    href="https://www.figma.com/file/rK06GY6bvEfokuzrFGdtWB/(v11)-Text-Styles---IBM-Design-Language?node-id=129%3A2"
+    >
+
+![](../../images/resource-cards/figma.png)
+
+  </ResourceCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+  <ResourceCard
+    subTitle="Figma lorem"
+    aspectRatio="2:1"
+    href="#"
+    >
+
+![](../../images/resource-cards/bee.png)
+
+  </ResourceCard>
+</Column>
+</Row>
